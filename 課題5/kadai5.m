@@ -3,14 +3,14 @@
 % 下記はサンプルプログラムである．
 % 課題作成にあたっては「Lenna」以外の画像を用いよ．
 
-ORG=imread('Lenna.png'); % 原画像の入力
+ORG=imread('../images/molmot.jpg'); % 原画像の入力
 ORG = rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar;
 pause;
 
 H = imhist(ORG); %ヒストグラムのデータを列ベクトルEに格納
 myu_T = mean(H);
-max_val = 0;
+max_val = 0; 
 max_thres = 1;
 for i=1:255
 C1 = H(1:i); %ヒストグラムを2つのクラスに分ける
