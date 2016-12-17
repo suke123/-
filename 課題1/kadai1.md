@@ -72,6 +72,8 @@ IMG2 = imresize(IMG,8,'box'); % 画像の拡大
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
 図14 1/64サンプリング
 
+[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
+
 ###考察
 
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
