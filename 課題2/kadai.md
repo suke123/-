@@ -5,33 +5,32 @@
 `ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する`  
 `colormap(gray);`  
 `colorbar;`  
-`imagesc(ORG); axis image; % 画像の表示`  
+`imagesc(ORG);  
+axis image; % 画像の表示` 
 
 によって，原画像を読み込み，表示した結果を図１に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/motoimage.png)  
 図1 原画像
 
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
+原画像を2階調にするには，元の256階調のうち、0から127は0，128から255は1とする．そのようにすることにより，白黒の2階調で表された画像が生成される．
+`IMG = ORG>128;`  
+`imagesc(IMG);`  
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
+2階調の結果を図２に示す．
 
-1/2サンプリングの結果を図２に示す．
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/2kaityou.png)  
+図2 2階調画像  
+同様に原画像を4階調画像にするためには，256階調を4等分する．つまり，0-63，64-127，128-191，192-255の4つに分割する．
+`IMG0 = ORG>64;`  
+`IMG1 = ORG>128;`  
+`IMG2 = ORG>192;`  
+`IMG = IMG0 + IMG1 + IMG2;`  
+`imagesc(IMG);`  
+とする．4階調の結果を図３に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
-図2 1/2サンプリング
-
-同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
-
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
-
-とする．1/4サンプリングの結果を図３に示す．
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-4.png)  
-図3 1/4サンプリング
-
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/4kaityou.png)  
+図3 4階調画像  
 1/8から1/64ンプリングは，
 
 IMG = imresize(ORG,0.5); % 画像の縮小  
