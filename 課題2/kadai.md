@@ -30,23 +30,21 @@
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/4kaityou.png)  
 図3 4階調画像  
-1/8から1/64ンプリングは，  
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
 
-を繰り返す．サンプリングの結果を図４～７に示す．
+8階調は，256階調を8等分する．つまり，0-31，32-63，64-95，96-127，128-159，160-191，192-223，224-255の8つに分割する.
+`IMG0 = ORG>32;`     
+`IMG1 = ORG>64;`     
+`IMG2 = ORG>96;`     
+`IMG3 = ORG>128;`    
+`IMG4 = ORG>160;`    
+`IMG5 = ORG>192;`     
+`IMG6 = ORG>224;`     
+`IMG = IMG0 + IMG1 + IMG2 + IMG3 + IMG4 + IMG5 + IMG6;`    
+`imagesc(IMG);`     
+とする．8階調の結果を図４に示す．    
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-8.png)  
-図4 1/8サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-16.png)  
-図5 1/16サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-32.png)  
-図6 1/32サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-64.png)  
-図7 1/64サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/8kaityou.png)  
+図4 8階調画像
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
