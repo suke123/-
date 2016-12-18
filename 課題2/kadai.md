@@ -20,6 +20,7 @@
 2階調の結果を図２に示す．  
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/2kaityou.png)  
 図2 2階調画像  
+
 同様に原画像を4階調画像にするためには，256階調を4等分する．つまり，0-63，64-127，128-191，192-255の4つに分割する．  
 `IMG0 = ORG>64;`  
 `IMG1 = ORG>128;`  
@@ -46,30 +47,23 @@
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/8kaityou.png)  
 図4 8階調画像
 
-次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot0.png)  
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe0.png)  
 図8 原画像
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot1.png)  
-図9 1/2サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe1.png)  
+図9 2階調画像  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot2.png)  
-図10 1/4サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe2.png)  
+図10 4階調画像  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot3.png)  
-図11 1/8サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe3.png)  
+図11 8階調画像  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot4.png)  
-図12 1/16サンプリング
+###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/kadai2.m)  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot5.png)  
-図13 1/32サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
-図14 1/64サンプリング
-
-**###考察**
+###考察
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
 また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
 モルモットと亀の画像を比較すると，
