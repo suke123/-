@@ -58,7 +58,7 @@
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe2.png)  
 図7 4階調画像  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe3.png)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe3.png)  
 図8 8階調画像  
 
 ###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/kadai2.m)  
