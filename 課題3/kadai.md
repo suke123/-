@@ -1,13 +1,11 @@
-# 課題１レポート
+# 課題１レポート「閾値処理」
 
-亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
-
-ORG=imread('Lenna.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
-
+亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．      
+`ORG=imread('../images/kame.png'); % 原画像の入力`     
+`imagesc(ORG); axis image; % 画像の表示`   
 によって，原画像を読み込み，表示した結果を図１に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kame1-1.png)  
 図1 原画像
 
 原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
@@ -71,6 +69,8 @@ IMG2 = imresize(IMG,2,'box'); % 画像の拡大
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
 図14 1/64サンプリング
+
+###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/kadai3.m)   
 
 **###考察**
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
