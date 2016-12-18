@@ -14,8 +14,8 @@ axis image; % 画像の表示`
 図1 原画像
 
 原画像を2階調にするには，元の256階調のうち、0から127は0，128から255は1とする．そのようにすることにより，白黒の2階調で表された画像が生成される．  
-`IMG = ORG>128;`  
-`imagesc(IMG);`  
+`IMG = ORG>128;`　
+`imagesc(IMG);`  
 
 2階調の結果を図２に示す．  
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/2kaityou.png)  
