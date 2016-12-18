@@ -13,26 +13,24 @@ axis image; % 画像の表示`
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/motoimage.png)  
 図1 原画像
 
-原画像を2階調にするには，元の256階調のうち、0から127は0，128から255は1とする．そのようにすることにより，白黒の2階調で表された画像が生成される．
-`IMG = ORG>128;`  
+原画像を2階調にするには，元の256階調のうち、0から127は0，128から255は1とする．そのようにすることにより，白黒の2階調で表された画像が生成される．  
+`IMG = ORG>128;`  
 `imagesc(IMG);`  
 
-2階調の結果を図２に示す．
-
+2階調の結果を図２に示す．  
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/2kaityou.png)  
 図2 2階調画像  
-同様に原画像を4階調画像にするためには，256階調を4等分する．つまり，0-63，64-127，128-191，192-255の4つに分割する．
+同様に原画像を4階調画像にするためには，256階調を4等分する．つまり，0-63，64-127，128-191，192-255の4つに分割する．  
 `IMG0 = ORG>64;`  
 `IMG1 = ORG>128;`  
 `IMG2 = ORG>192;`  
 `IMG = IMG0 + IMG1 + IMG2;`  
 `imagesc(IMG);`  
-とする．4階調の結果を図３に示す．
+とする．4階調の結果を図３に示す．  
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/4kaityou.png)  
 図3 4階調画像  
-1/8から1/64ンプリングは，
-
+1/8から1/64ンプリングは，  
 IMG = imresize(ORG,0.5); % 画像の縮小  
 IMG2 = imresize(IMG,2,'box'); % 画像の拡大
 
