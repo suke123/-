@@ -2,6 +2,7 @@
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
 ORG=imread('../images/elephant.jpg'); % 原画像の入力
+
 ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する
 colormap(gray);
 colorbar;
