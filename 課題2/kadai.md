@@ -1,12 +1,12 @@
 # 課題2レポート「階調数と疑似輪郭」
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
-`ORG=imread('../images/elephant.jpg'); % 原画像の入力`  
-`ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する`  
-`colormap(gray);`  
-`colorbar;`  
-`imagesc(ORG);  
-axis image; % 画像の表示` 
+`ORG=imread('../images/elephant.jpg'); % 原画像の入力  
+ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する  
+colormap(gray);  
+colorbar;  
+imagesc(ORG);  
+axis image; % 画像の表示`  
 
 によって，原画像を読み込み，表示した結果を図１に示す．
 
@@ -14,8 +14,8 @@ axis image; % 画像の表示`
 図1 原画像
 
 原画像を2階調にするには，元の256階調のうち、0から127は0，128から255は1とする．そのようにすることにより，白黒の2階調で表された画像が生成される．  
-`IMG = ORG>128;`　　
-`imagesc(IMG);`  
+`IMG = ORG>128;        
+imagesc(IMG);`  
 
 2階調の結果を図２に示す．  
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/2kaityou.png)  
