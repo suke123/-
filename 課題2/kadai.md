@@ -1,11 +1,11 @@
 # 課題2レポート「階調数と疑似輪郭」
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
-`ORG=imread('../images/elephant.jpg'); % 原画像の入力`
-`ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する`
-`colormap(gray);`
-`colorbar;`
-`imagesc(ORG); axis image; % 画像の表示`
+`ORG=imread('../images/elephant.jpg'); % 原画像の入力`  
+`ORG = rgb2gray(ORG); %イメージをグレースケールイメージに変換する`  
+`colormap(gray);`  
+`colorbar;`  
+`imagesc(ORG); axis image; % 画像の表示`  
 
 によって，原画像を読み込み，表示した結果を図１に示す．
 
