@@ -50,16 +50,16 @@
 次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe0.png)  
-図8 原画像
+図5 原画像
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe1.png)  
-図9 2階調画像  
+図6 2階調画像  
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe2.png)  
-図10 4階調画像  
+図7 4階調画像  
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe3.png)  
-図11 8階調画像  
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/images/giraffe3.png)
+図8 8階調画像  
 
 ###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C2/kadai2.m)  
 
