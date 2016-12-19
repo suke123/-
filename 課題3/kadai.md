@@ -25,24 +25,20 @@
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido96.png)       
 図3 輝度値96               
 
-1/8から1/64ンプリングは，
+同様に輝度値の閾値を128，192に設定するには，次のようにする．        
+`IMG = ORG > 128;% 輝度値が128以上の画素を1，その他を0に変換`          
+`imagesc(IMG); colormap(gray); colorbar;`        
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
+`IMG = ORG > 192;% 輝度値が192以上の画素を1，その他を0に変換`          
+`imagesc(IMG); colormap(gray); colorbar;`          
 
-を繰り返す．サンプリングの結果を図４～７に示す．
+生成した結果を図４，５に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido128.png)  
-図4 1/8サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido128.png)      
+図4 輝度値128          
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido192%5D.png)  
-図5 1/16サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-32.png)  
-図6 1/32サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-64.png)  
-図7 1/64サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido192%5D.png)      
+図5 輝度値192           
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
