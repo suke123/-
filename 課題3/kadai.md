@@ -13,7 +13,7 @@
 `imagesc(IMG); colormap(gray); colorbar;`            
 輝度値の閾値を64に設定し，生成した結果を図2に示す．      
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido64.png)       
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/kido64.png)
 図2 輝度値64        
 
 同様に輝度値の閾値を96に設定する．               
