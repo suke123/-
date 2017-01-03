@@ -31,6 +31,8 @@ imhist(ORG); % ヒストグラムの表示
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe_after.png)     
 図6 キリン画像のヒストグラム    
 
+###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/kadai4.m)   
+
 ###考察
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
 また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
