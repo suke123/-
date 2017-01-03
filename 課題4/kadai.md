@@ -22,16 +22,18 @@ imhist(ORG); % ヒストグラムの表示
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/molmot0.png)  
-図8 原画像
+図3 原画像   
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/molmot_after.png)  
-図9 1/2サンプリング
+図4 モルモット画像のヒストグラム   
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe0.png)  
-図10 1/4サンプリング
+次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．     
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe0.png)    
+図5 原画象     
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe_after.png)  
-図11 1/8サンプリング
+図6 キリン画像のヒストグラム    
 
 ###考察
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
