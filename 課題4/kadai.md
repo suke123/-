@@ -7,7 +7,6 @@ ORG=rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar;
 
 によって，原画像を読み込み，表示した結果を図１に示す．
-
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/kame1-1.png)  
 図1 原画像
 
@@ -15,21 +14,18 @@ imagesc(ORG); colormap(gray); colorbar;
 imhist(ORG); % ヒストグラムの表示       
 
 ヒストグラムの結果を図２に示す．
-
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/kame_after.png)  
 図2 カメ画像のヒストグラム    
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
-
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/molmot0.png)  
 図3 原画像   
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/molmot_after.png)  
 図4 モルモット画像のヒストグラム   
 
-次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．     
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe0.png)    
+次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe0.png)    
 図5 原画象     
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/giraffe_after.png)  
