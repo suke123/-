@@ -13,9 +13,9 @@ imagesc(ORG); colormap(gray); colorbar;
 原画像のヒストグラムを表示するためには以下のようにする．        
 imhist(ORG); % ヒストグラムの表示       
 
-ヒストグラムの結果を図２に示す．
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/kame_after.png)  
-図2 カメ画像のヒストグラム    
+ヒストグラムの結果を図２に示す．        
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/kame_after.png)  　
+図2 カメ画像のヒストグラム   
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C4/images/molmot0.png)  
