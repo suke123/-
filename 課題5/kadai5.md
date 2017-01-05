@@ -11,7 +11,7 @@ imagesc(ORG); colormap(gray); colorbar;
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/molmot0.png)  
 図1 原画像
 
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
+原画像を，判別分析法を用いて二値化するには，画像数や平均値，分散を算出し．なお，拡大する際には，単純補間するために「box」オプションを設定する．
 
 IMG = imresize(ORG,0.5); % 画像の縮小  
 IMG2 = imresize(IMG,2,'box'); % 画像の拡大
