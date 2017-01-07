@@ -20,7 +20,7 @@ imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C6/images/kame_after1.png)  
 図2 二値化画像(カメ)
 
-次に，原画像の各画素の濃度値を画素位置によりあらかじめ定められたディザマトリックスの値と比較し，sの大小関係で出力画素の濃度値を決定するディザ法による二値化を行う．         
+次に，原画像の各画素の濃度値を画素位置によりあらかじめ定められたディザマトリックスの値と比較し，sの大小関係で出力画素の濃度値を決定するディザ法による二値化を行う．        
 IMG = dither(ORG); % ディザ法による二値化         
 imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 
