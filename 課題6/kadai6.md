@@ -1,34 +1,33 @@
-# 課題１レポート
+# 課題6レポート「画像の二値化」
 
-亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
+の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
-ORG=imread('Lenna.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
+ORG=imread('../images/giraffe.jpg'); % 原画像の入力       
+ORG = rgb2gray(ORG);       
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示        
 
 によって，原画像を読み込み，表示した結果を図１に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
-図1 原画像
+図1 原画像(カメ)
 
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
+原画像の各画素の濃度を128を閾値として二値化するには，128より明るい画素を白に，暗い画素を黒にする．      
+IMG = ORG>128; % 128による二値化         
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示           
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
-
-1/2サンプリングの結果を図２に示す．
+二値化の結果を図２に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
-図2 1/2サンプリング
+図2 二値化画像(カメ)
 
-同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
+次に，原画像の各画素の濃度値を画素位置によりあらかじめ定められたディザマトリックスの値と比較し，sの大小関係で出力画素の濃度値を決定するディザ法による二値化を行う．         
+IMG = dither(ORG); % ディザ法による二値化         
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,4,'box'); % 画像の拡大
-
-とする．1/4サンプリングの結果を図３に示す．
+とする．ディザ法による二値化の結果を図３に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-4.png)  
-図3 1/4サンプリング
+図3 ディザ法による二値化画像(カメ)
 
 1/8から1/64ンプリングは，
 
@@ -72,7 +71,7 @@ IMG2 = imresize(IMG,8,'box'); % 画像の拡大
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
 図14 1/64サンプリング
 
-###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
+###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C6/kadai6.m)
 
 ###考察
 
