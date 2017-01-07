@@ -1,24 +1,24 @@
-% 隱ｲ鬘?0 逕ｻ蜒上?繧ｨ繝?ず謚ｽ蜃ｺ 
-% 谺｡縺ｮ繝励Ο繧ｰ繝ｩ繝?ｒ蜿り?縺ｫ縺励※?後お繝?ず謚ｽ蜃ｺ繧剃ｽ馴ｨ薙○繧茨ｼ?
-% 蜷???鍬enna莉･螟悶?逕ｻ蜒上ｒ逕ｨ縺?ｈ??
-% 萓?
+% 課題10 画像のエッジ抽出 
+% 次のプログラムを参考にして，エッジ抽出を体験せよ．
+% 各自，Lenna以外の画像を用いよ． 
+% 例
 
-ORG = imread('../images/kame.png'); % 蜴溽判蜒上?蜈･蜉?
-ORG = rgb2gray(ORG); %繧ｫ繝ｩ繝ｼ縺九ｉ繧ｰ繝ｬ繧､縺ｸ縺ｮ螟画鋤
-imagesc(ORG); colormap('gray'); colorbar;% 逕ｻ蜒剰｡ｨ遉ｺ
-pause; % 荳?凾蛛懈ｭ｢
+ORG = imread('../images/kame.png'); % 原画像の入力
+ORG = rgb2gray(ORG); %カラーからグレイへの変換
+imagesc(ORG); colormap('gray'); colorbar;% 画像表示
+pause; % 一時停止
 
-IMG = edge(ORG,'prewitt'); % 繧ｨ繝?ず謚ｽ蜃ｺ?医?繝ｬ繧ｦ繧｣繝?ヨ豕包ｼ?
-imagesc(IMG); colormap('gray'); colorbar;% 逕ｻ蜒剰｡ｨ遉ｺ
-pause; % 荳?凾蛛懈ｭ｢
+IMG = edge(ORG,'prewitt'); % エッジ抽出（プレウィット法）
+imagesc(IMG); colormap('gray'); colorbar;% 画像表示
+pause; % 一時停止
 
-IMG = edge(ORG,'sobel'); % 繧ｨ繝?ず謚ｽ蜃ｺ?医た繝吶Ν豕包ｼ?
-imagesc(IMG); colormap('gray'); colorbar;% 逕ｻ蜒剰｡ｨ遉ｺ
-pause; % 荳?凾蛛懈ｭ｢
+IMG = edge(ORG,'sobel'); % エッジ抽出（ソベル法）
+imagesc(IMG); colormap('gray'); colorbar;% 画像表示
+pause; % 一時停止
 
-IMG = edge(ORG,'canny'); % 繧ｨ繝?ず謚ｽ蜃ｺ?医く繝｣繝九?豕包ｼ?
-imagesc(IMG); colormap('gray'); colorbar;% 逕ｻ蜒剰｡ｨ遉ｺ
-pause; % 荳?凾蛛懈ｭ｢
+IMG = edge(ORG,'canny'); % エッジ抽出（キャニー法）
+imagesc(IMG); colormap('gray'); colorbar;% 画像表示
+pause; % 一時停止
 
 
 

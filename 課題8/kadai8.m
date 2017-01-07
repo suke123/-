@@ -1,16 +1,16 @@
-% 隱ｲ鬘鯉ｼ?繝ｩ繝吶Μ繝ｳ繧ｰ
-% 莠悟?蛹悶＆繧後◆逕ｻ蜒上?騾｣邨先?蛻?↓繝ｩ繝吶Ν繧偵▽縺代ｈ??
-% 荳玖ｨ倥?繧ｵ繝ｳ繝励Ν繝励Ο繧ｰ繝ｩ繝?〒縺ゅｋ??
-% 隱ｲ鬘御ｽ懈?縺ｫ縺ゅ◆縺｣縺ｦ縺ｯ縲鍬enna縲堺ｻ･螟悶?逕ｻ蜒上ｒ逕ｨ縺?ｈ??
-% 萓?
+% 課題８ ラベリング
+% 二値化された画像の連結成分にラベルをつけよ．
+% 下記はサンプルプログラムである． 
+% 課題作成にあたっては「Lenna」以外の画像を用いよ． 
+% 例
 
-ORG = imread('../images/zebra.jpg'); % 逕ｻ蜒上?隱ｭ縺ｿ霎ｼ縺ｿ
-ORG = rgb2gray(ORG); % 逋ｽ鮟呈ｿ?ｷ｡逕ｻ蜒上↓螟画鋤
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+ORG = imread('../images/zebra.jpg'); % 画像の読み込み
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-IMG = ORG > 128; % 髢ｾ蛟､128縺ｧ莠悟?蛹?
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+IMG = ORG > 128; % 閾値128で二値化
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;
 IMG = bwlabeln(IMG);
-imagesc(IMG); colormap(jet); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+imagesc(IMG); colormap(jet); colorbar; % 画像の表示
 pause;

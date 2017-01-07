@@ -1,22 +1,22 @@
-% 隱ｲ鬘鯉ｼ?繝｡繝?ぅ繧｢繝ｳ繝輔ぅ繝ｫ繧ｿ縺ｨ蜈磯強蛹?
-% 繝｡繝?ぅ繧｢繝ｳ繝輔ぅ繝ｫ繧ｿ繝ｼ繧帝←逕ｨ縺暦ｼ後ヮ繧､繧ｺ髯､蜴ｻ繧剃ｽ馴ｨ薙○繧茨ｼ?
-% 蜷???鍬enna莉･螟悶?逕ｻ蜒上ｒ逕ｨ縺?ｈ??
-% 萓?
+% 課題９ メディアンフィルタと先鋭化
+% メディアンフィルターを適用し，ノイズ除去を体験せよ．
+% 各自，Lenna以外の画像を用いよ．
+% 例
 
-ORG = imread('../images/molmot.jpg'); % 逕ｻ蜒上?隱ｭ縺ｿ霎ｼ縺ｿ
-ORG = rgb2gray(ORG); % 逋ｽ鮟呈ｿ?ｷ｡逕ｻ蜒上↓螟画鋤
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+ORG = imread('../images/molmot.jpg'); % 画像の読み込み
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-ORG = imnoise(ORG,'salt & pepper',0.02); % 繝弱う繧ｺ豺ｻ莉?
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-IMG = filter2(fspecial('average',3),ORG); % 蟷ｳ貊大喧繝輔ぅ繝ｫ繧ｿ縺ｧ髮鷹浹髯､蜴ｻ
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;
-IMG = medfilt2(ORG,[3 3]); % 繝｡繝?ぅ繧｢繝ｳ繝輔ぅ繝ｫ繧ｿ縺ｧ髮鷹浹髯､蜴ｻ
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;
-f=[0,-1,0;-1,5,-1;0,-1,0]; % 繝輔ぅ繝ｫ繧ｿ縺ｮ險ｭ險?
-IMG = filter2(f,IMG,'same'); % 繝輔ぅ繝ｫ繧ｿ縺ｮ驕ｩ逕ｨ
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+f=[0,-1,0;-1,5,-1;0,-1,0]; % フィルタの設計
+IMG = filter2(f,IMG,'same'); % フィルタの適用
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;

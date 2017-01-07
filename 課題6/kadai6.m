@@ -1,19 +1,19 @@
-% 隱ｲ鬘鯉ｼ悶?逕ｻ蜒上?莠悟?蛹?
-% 荳玖ｨ倥?繝励Ο繧ｰ繝ｩ繝?ｒ蜿り?縺ｫ縺励※逕ｻ蜒上ｒ莠悟?蛹悶○繧茨ｼ?
-% 荳玖ｨ倥?繧ｵ繝ｳ繝励Ν繝励Ο繧ｰ繝ｩ繝?〒縺ゅｋ??
-% 隱ｲ鬘御ｽ懈?縺ｫ縺ゅ◆縺｣縺ｦ縺ｯ縲鍬enna縲堺ｻ･螟悶?逕ｻ蜒上ｒ逕ｨ縺?ｈ??
+% 課題６　画像の二値化
+% 下記のプログラムを参考にして画像を二値化せよ．
+% 下記はサンプルプログラムである．
+% 課題作成にあたっては「Lenna」以外の画像を用いよ．
 
-clear; % 螟画焚縺ｮ繧ｪ繝ｼ繝ｫ繧ｯ繝ｪ繧｢
-ORG=imread('../images/giraffe.jpg'); % 蜴溽判蜒上?蜈･蜉?
+clear; % 変数のオールクリア
+ORG=imread('../images/giraffe.jpg'); % 原画像の入力
 ORG = rgb2gray(ORG);
-imagesc(ORG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
-pause; % 荳?凾蛛懈ｭ｢
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+pause; % 一時停止
 
 
-IMG = ORG>128; % 128縺ｫ繧医ｋ莠悟?蛹?
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+IMG = ORG>128; % 128による二値化
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;
 
-IMG = dither(ORG); % 繝?ぅ繧ｶ豕輔↓繧医ｋ莠悟?蛹?
-imagesc(IMG); colormap(gray); colorbar; % 逕ｻ蜒上?陦ｨ遉ｺ
+IMG = dither(ORG); % ディザ法による二値化
+imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 
