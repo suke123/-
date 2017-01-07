@@ -41,26 +41,21 @@ imagesc(IMG);
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/molmot_after.png)  
 図2 判別分析法用いた二値化の結果(モルモット)
 
-次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+次に，シマウマの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/zebra0.png)  
-図3 1/4サンプリング
-
-1/8から1/64ンプリングは，
-
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,8,'box'); % 画像の拡大
-
-を繰り返す．サンプリングの結果を図４～７に示す．
+図3 原画象(シマウマ)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/zebra_after.png)  
-図4 1/8サンプリング
+図4 判別分析法用いた二値化の結果(シマウマ)
+
+次に，ゾウの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/zou0.png)  
-図5 1/16サンプリング
+図5 原画象(ゾウ)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/images/zou_after.png)  
-図6 1/32サンプリング
+図6 判別分析法用いた二値化の結果(ゾウ)
 
 ###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C5/kadai5.m)
 
