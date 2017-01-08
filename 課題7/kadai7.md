@@ -2,22 +2,20 @@
 
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
-ORG=imread('Lenna.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
+ORG = imread('../images/giraffe.jpg'); % 画像の読み込み  
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換  
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 
-によって，原画像を読み込み，表示した結果を図１に示す．
+によって，原画像を読み込み，白黒濃淡画像に変換した結果を図１に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
-図1 原画像
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame0.png)  
+図1 白黒濃淡画像(カメ)
 
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
+図1の濃度ヒストグラムを生成する．結果を図2に示す．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
+imhist(ORG); % 濃度ヒストグラムを生成、表示
 
-1/2サンプリングの結果を図２に示す．
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame_after1.png)  
 図2 1/2サンプリング
 
 同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
@@ -72,9 +70,9 @@ IMG2 = imresize(IMG,8,'box'); % 画像の拡大
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
 図14 1/64サンプリング
 
-###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
+### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
 
-###考察
+### 考察
 
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
 また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
