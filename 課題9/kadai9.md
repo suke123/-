@@ -15,26 +15,24 @@ imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 ```matlab
 ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付
 ```
-1/2サンプリングの結果を図２に示す．
+原画像にノイズを添付した結果を図２に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
-図2 1/2サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after1.png)  
+図2 ノイズ添付後画像(カメ)
 
-同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
+画素ごとの濃度値の細かな変動を無くし，滑らかな画像にする処理である「平滑化」を行う．
+```matlab
+IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去
+```
+平滑化フィルタによるノイズ除去の結果を図３に示す．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,4,'box'); % 画像の拡大
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after2.png)  
+図3 平滑化フィルタによるノイズ除去の結果(カメ)
 
-とする．1/4サンプリングの結果を図３に示す．
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-4.png)  
-図3 1/4サンプリング
-
-1/8から1/64ンプリングは，
-
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,8,'box'); % 画像の拡大
-
+次は，図2の画像に対して，変換後の濃度値を着目画素の近傍画素の濃度値の平均値とするのではなく，それらの画素濃度の中央値とする方法である「メディアンフィルタ法」を行う．
+```matlab
+IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
+```
 を繰り返す．サンプリングの結果を図４～７に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-8.png)  
