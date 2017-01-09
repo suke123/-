@@ -2,9 +2,11 @@
 
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
 
-ORG = imread('../images/giraffe.jpg'); % 画像の読み込み  
-ORG = rgb2gray(ORG); % 白黒濃淡画像に変換  
+```matlab
+ORG = imread('../images/giraffe.jpg'); % 画像の読み込み
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
 imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+```
 
 によって，原画像を読み込み，白黒濃淡画像に変換した結果を図１に示す．
 
@@ -13,7 +15,9 @@ imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 
 図1の濃度ヒストグラムを生成する．結果を図2に示す．
 
+```matlab
 imhist(ORG); % 濃度ヒストグラムを生成、表示
+```
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame_after1.png)  
 図2 濃度ヒストグラム(カメ)
