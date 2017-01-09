@@ -1,20 +1,20 @@
 # 課題9レポート「メディアンフィルタと先鋭化」
 
-亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
+カメの画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
+```matlab
+ORG = imread('../images/molmot.jpg'); % 画像の読み込み
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+```
+によって，原画像を読み込み，白黒濃淡画像に変換し，表示した結果を図１に示す．
 
-ORG=imread('Lenna.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame0.png)  
+図1 原画像(カメ)
 
-によって，原画像を読み込み，表示した結果を図１に示す．
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
-図1 原画像
-
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
-
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
-
+原画像にノイズを添付させる．
+```matlab
+ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付
+```
 1/2サンプリングの結果を図２に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
