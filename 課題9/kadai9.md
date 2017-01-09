@@ -29,23 +29,23 @@ IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after2.png)  
 図3 平滑化フィルタによるノイズ除去の結果(カメ)
 
-次は，図2の画像に対して，変換後の濃度値を着目画素の近傍画素の濃度値の平均値とするのではなく，それらの画素濃度の中央値とする方法である「メディアンフィルタ法」を行う．
+次に，図2の画像に対して，変換後の濃度値を着目画素の近傍画素の濃度値の平均値とするのではなく，それらの画素濃度の中央値とする方法である「メディアンフィルタ法」を行う．
 ```matlab
 IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
 ```
 メディアンフィルタ法によるノイズ除去の結果を図4に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-8.png)  
-図4 1/8サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after3.png)  
+図4 メディアンフィルタ法によるノイズ除去の結果(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-16.png)  
-図5 1/16サンプリング
+図2の画像に対して，変換後の濃度値を着目画素の近傍画素の濃度値の平均値とするのではなく，それらの画素濃度の中央値とする方法である「メディアンフィルタ法」を行う．
+```matlab
+IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
+```
+メディアンフィルタ法によるノイズ除去の結果を図4に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-32.png)  
-図6 1/32サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-64.png)  
-図7 1/64サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after3.png)  
+図4 メディアンフィルタ法によるノイズ除去の結果(カメ)
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
