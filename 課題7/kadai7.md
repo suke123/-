@@ -58,16 +58,21 @@ imhist(ORG); % 濃度ヒストグラムを生成、表示
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/elephant_after3.png)  
 図8 ダイナミックレンジ拡大後の画像の濃度ヒストグラム(ゾウ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot4.png)  
-図12 1/16サンプリング
+次に，キリンの画像を原画像として同様の処理を行う．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot5.png)  
-図13 1/32サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/giraffe0.png)  
+図5 白黒濃淡画像(キリン)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
-図14 1/64サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/giraffe_after1.png)  
+図6 濃度ヒストグラム(キリン)
 
-### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/giraffe_after2.png)  
+図7 ダイナミックレンジ拡大後の画像(キリン)
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/giraffe_after3.png)  
+図8 ダイナミックレンジ拡大後の画像の濃度ヒストグラム(キリン)
+
+### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/kadai7.m)
 
 ### 考察
 
