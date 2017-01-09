@@ -38,7 +38,7 @@ IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after3.png)  
 図4 メディアンフィルタ法によるノイズ除去の結果(カメ)
 
-図2の画像に対して，変換後の濃度値を着目画素の近傍画素の濃度値の平均値とするのではなく，それらの画素濃度の中央値とする方法である「メディアンフィルタ法」を行う．
+図2の画像に対して，相関結果の中央値フィルタ．
 ```matlab
 IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
 ```
