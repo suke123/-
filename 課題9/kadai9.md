@@ -33,7 +33,7 @@ IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去
 ```matlab
 IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
 ```
-を繰り返す．サンプリングの結果を図４～７に示す．
+メディアンフィルタ法によるノイズ除去の結果を図4に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-8.png)  
 図4 1/8サンプリング
