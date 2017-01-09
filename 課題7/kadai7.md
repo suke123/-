@@ -22,20 +22,25 @@ imhist(ORG); % 濃度ヒストグラムを生成、表示
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame_after1.png)  
 図2 濃度ヒストグラム(カメ)
 
-同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
+図2より図1の濃度は128までしかないことが分かる．次に，現画像をダイナミックレンジ拡大する．その結果を図3に示す．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,4,'box'); % 画像の拡大
+```matlab
+ORG = double(ORG);
+mn = min(ORG(:)); % 濃度値の最小値を算出
+mx = max(ORG(:)); % 濃度値の最大値を算出
+ORG = (ORG-mn)/(mx-mn)*255;
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示
+```
 
-とする．1/4サンプリングの結果を図３に示す．
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame_after2.png)  
+図3 ダイナミックレンジ拡大後の画像(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-4.png)  
-図3 1/4サンプリング
+図3の濃度ヒストグラムを生成する．結果を図4に示す．
 
-1/8から1/64ンプリングは，
-
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,8,'box'); % 画像の拡大
+```matlab
+ORG = uint8(ORG); % この行について考察せよ
+imhist(ORG); % 濃度ヒストグラムを生成、表示
+```
 
 を繰り返す．サンプリングの結果を図４～７に示す．
 
