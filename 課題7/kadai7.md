@@ -16,7 +16,7 @@ imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 imhist(ORG); % 濃度ヒストグラムを生成、表示
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C7/images/kame_after1.png)  
-図2 1/2サンプリング
+図2 濃度ヒストグラム(カメ)
 
 同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
 
