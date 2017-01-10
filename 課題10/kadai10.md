@@ -41,7 +41,7 @@ IMG = edge(ORG,'canny'); % エッジ抽出（キャニー法）
 
 結果を図4に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame2.png)  
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame3.png)  
 図4 キャニー法を用いたエッジ抽出結果(カメ)
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
