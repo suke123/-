@@ -51,19 +51,19 @@ IMG = filter2(f,IMG,'same'); % フィルタの適用
 次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe0.png)  
-図6 原画像(カメ)
+図6 原画像(キリン)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after1.png)  
-図7 ノイズ添付後画像(カメ)
+図7 ノイズ添付後画像(キリン)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after2.png)  
-図8 平滑化フィルタによるノイズ除去の結果(カメ)
+図8 平滑化フィルタによるノイズ除去の結果(キリン)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after3.png)  
-図9 メディアンフィルタ法によるノイズ除去の結果(カメ)
+図9 メディアンフィルタ法によるノイズ除去の結果(キリン)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after4.png)  
-図10 設計したフィルタを適用した画像(カメ)
+図10 設計したフィルタを適用した画像(キリン)
 
 ### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/kadai9.m)
 

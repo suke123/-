@@ -8,8 +8,8 @@ imagesc(ORG); colormap('gray'); colorbar;% 画像表示
 ```
 によって，原画像を読み込み，グレースケールに変換し，表示した結果を図１に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
-図1 原画像
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame0.png)  
+図1 原画像(カメ)
 
 原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
 
