@@ -38,41 +38,36 @@ IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after3.png)  
 図4 メディアンフィルタ法によるノイズ除去の結果(カメ)
 
-図2の画像に対して，相関結果の中央値フィルタ．
+相関結果の中央値としてフィルタを通す．
 ```matlab
-IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去
+f=[0,-1,0;-1,5,-1;0,-1,0]; % フィルタの設計
+IMG = filter2(f,IMG,'same'); % フィルタの適用
 ```
-メディアンフィルタ法によるノイズ除去の結果を図4に示す．
+結果を図5に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after3.png)  
-図4 メディアンフィルタ法によるノイズ除去の結果(カメ)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/kame_after4.png)  
+図5 設計したフィルタを適用した画像(カメ)
 
-次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+次に，キリンの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot0.png)  
-図8 原画像
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe0.png)  
+図6 原画像(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot1.png)  
-図9 1/2サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after1.png)  
+図7 ノイズ添付後画像(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot2.png)  
-図10 1/4サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after2.png)  
+図8 平滑化フィルタによるノイズ除去の結果(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot3.png)  
-図11 1/8サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after3.png)  
+図9 メディアンフィルタ法によるノイズ除去の結果(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot4.png)  
-図12 1/16サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/images/giraffe_after4.png)  
+図10 設計したフィルタを適用した画像(カメ)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot5.png)  
-図13 1/32サンプリング
+### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C9/kadai9.m)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/molmot6.png)  
-図14 1/64サンプリング
-
-###[ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
-
-###考察
+### 考察
 
 このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
 また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
