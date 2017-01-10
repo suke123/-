@@ -1,11 +1,12 @@
-# 課題１レポート
+# 課題10レポート「画像のエッジ抽出」
 
 亀の画像を原画像とする．この画像は縦244画像，横326画素によるディジタルカラー画像である．
-
-ORG=imread('Lenna.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
-
-によって，原画像を読み込み，表示した結果を図１に示す．
+```matlab
+ORG = imread('../images/kame.png'); % 原画像の入力
+ORG = rgb2gray(ORG); %カラーからグレイへの変換
+imagesc(ORG); colormap('gray'); colorbar;% 画像表示
+```
+によって，原画像を読み込み，グレースケールに変換し，表示した結果を図１に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-1.png)  
 図1 原画像
