@@ -49,11 +49,10 @@ imagesc(IMG); colormap(gray); colorbar;
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/giraffe0.png)    
 図6 原画像(キリン)    
-
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/giraffe1.png)     
-図7 輝度値64(キリン)
+図7 輝度値64(キリン)        
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/giraffe2.png)      
-図8 輝度値96(キリン)
+図8 輝度値96(キリン)      
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/giraffe3.png)       
 図9 輝度値128(キリン)    
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/images/giraffe4.png)      
@@ -62,6 +61,4 @@ imagesc(IMG); colormap(gray); colorbar;
 ### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C3/kadai3.m)   
 
 ### 考察
-このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
-また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
-モルモットと亀の画像を比較すると，
+輝度値の閾値を上げていくほど，画像の黒い箇所が多くなることが分かる．
