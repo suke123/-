@@ -58,6 +58,20 @@ IMG = edge(ORG,'canny'); % エッジ抽出（キャニー法）
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/giraffe3.png)  
 図8 キャニー法を用いたエッジ抽出結果(キリン)
 
+次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/molmot0.png)  
+図5 グレースケール変換後の原画像(モルモット)
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/molmot1.png)  
+図6 プレウィット法を用いたエッジ抽出結果(モルモット)
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/molmot2.png)  
+図7 ソベル法を用いたエッジ抽出結果(モルモット)
+
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/molmot3.png)  
+図8 キャニー法を用いたエッジ抽出結果(モルモット)
+
 ### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/kadai1.m)
 
 ### 考察
