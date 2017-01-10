@@ -6,49 +6,43 @@ ORG = imread('../images/kame.png'); % 原画像の入力
 ORG = rgb2gray(ORG); %カラーからグレイへの変換
 imagesc(ORG); colormap('gray'); colorbar;% 画像表示
 ```
-によって，原画像を読み込み，グレースケールに変換し，表示した結果を図１に示す．
+によって，原画像を読み込み，グレースケールに変換し，表示した結果を図1に示す．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame0.png)  
-図1 原画像(カメ)
+図1 グレースケール変換後の原画像(カメ)
 
-原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．
+まず，図1の画像に対してプレウィット法を用いてエッジ抽出を行う．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,2,'box'); % 画像の拡大
+```matlab
+IMG = edge(ORG,'prewitt'); % エッジ抽出（プレウィット法）
+```
 
-1/2サンプリングの結果を図２に示す．
+結果を図2に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-2.png)  
-図2 1/2サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame1.png)  
+図2 プレウィット法を用いたエッジ抽出結果(カメ)
 
-同様に原画像を1/4サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．すなわち，
+次に，図1の画像に対してソベル法を用いてエッジ抽出を行う．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,4,'box'); % 画像の拡大
+```matlab
+IMG = edge(ORG,'sobel'); % エッジ抽出（ソベル法）
+```
 
-とする．1/4サンプリングの結果を図３に示す．
+結果を図3に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-4.png)  
-図3 1/4サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame2.png)  
+図3 ソベル法を用いたエッジ抽出結果(カメ)
 
-1/8から1/64ンプリングは，
+次に，図1の画像に対してキャニー法を用いてエッジ抽出を行う．
 
-IMG = imresize(ORG,0.5); % 画像の縮小  
-IMG2 = imresize(IMG,8,'box'); % 画像の拡大
+```matlab
+IMG = edge(ORG,'canny'); % エッジ抽出（キャニー法）
+```
 
-を繰り返す．サンプリングの結果を図４～７に示す．
+結果を図4に示す．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-8.png)  
-図4 1/8サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-16.png)  
-図5 1/16サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-32.png)  
-図6 1/32サンプリング
-
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C1/images/kame1-64.png)  
-図7 1/64サンプリング
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C10/images/kame2.png)  
+図4 キャニー法を用いたエッジ抽出結果(カメ)
 
 次に，モルモットの画像を原画像として同様の処理を行った．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
 
