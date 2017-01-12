@@ -44,21 +44,18 @@ imagesc(IMG); colormap(jet); colorbar; % 画像の表示
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/molmot_after2.png)  
 図6 ラベリングの結果(モルモット)
 
-次に，キリンの画像を原画像として同様の処理を行う．この画像は縦1066画像，横1600画素によるディジタルカラー画像である．
+次に，2つの顔が描かれている画像を原画像として同様の処理を行う．この画像は縦580画像，横939画素によるディジタルカラー画像である．
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/giraffe0.png)  
-図7 白黒濃淡画像(キリン)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling0.png)  
+図7 白黒濃淡画像(顔)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/giraffe_after1.png)  
-図8 二値化画像(キリン)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling_after1.png)  
+図8 二値化画像(顔)
 
-![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/giraffe_after2.png)  
-図9 ラベリングの結果(キリン)
+![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling_after2.png)  
+図9 ラベリングの結果(顔)
 
 ### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/kadai8.m)
 
 ### 考察
-
-このようにサンプリング幅が大きくなると，モザイク状のサンプリング歪みが発生することが確認できる．
-また，今回使用した画像では1/16サンプリングまでは画像が亀であることが確認できる．しかし，1/32サンプリング以降はサンプリング歪みが非常に大きいため，元の画像を識別することが困難であることが分かる．
-モルモットと亀の画像を比較すると，画素数が少ない亀の画像は1/64サンプリングすると元の画像の判別が困難であるが，画素数が多いモルモットの画像は1/64サンプリング後も多少は識別が可能であることが分かる．
+「ラベリング」とは，同じ連結成分に属する画素に同一番号を，異なる連結成分に異なる番号を与える処理である．
