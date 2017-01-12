@@ -47,13 +47,13 @@ imagesc(IMG); colormap(jet); colorbar; % 画像の表示
 次に，2つの顔が描かれている画像を原画像として同様の処理を行う．この画像は縦580画像，横939画素によるディジタルカラー画像である．
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling0.png)  
-図7 白黒濃淡画像(顔)
+図7 白黒濃淡画像(顔画像)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling_after1.png)  
-図8 二値化画像(顔)
+図8 二値化画像(顔画像)
 
 ![原画像](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/images/labeling_after2.png)  
-図9 ラベリングの結果(顔)
+図9 ラベリングの結果(顔画像)
 
 ### [ソースコード](https://github.com/suke123/matlab_image_processing/blob/master/%E8%AA%B2%E9%A1%8C8/kadai8.m)
 
